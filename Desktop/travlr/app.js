@@ -10,7 +10,7 @@ var travelRouter = require('./app_server/routes/travel');
 var app = express();
 
 // view engine setup
-app.set('views', path.join(__dirname, 'views'));
+app.set('views', path.join(__dirname, 'app_server', 'views'));
 
 const hbs = require('hbs');
 app.set('view engine', 'hbs');
