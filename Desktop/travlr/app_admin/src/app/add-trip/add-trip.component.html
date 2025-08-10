@@ -1,0 +1,41 @@
+<h2>Add Trip</h2>
+<form [formGroup]="addForm" (ngSubmit)="onSubmit()" novalidate>
+  <div class="row g-3">
+    <div class="col-md-4">
+      <label class="form-label">Code</label>
+      <input class="form-control" formControlName="code">
+    </div>
+    <div class="col-md-8">
+      <label class="form-label">Name</label>
+      <input class="form-control" formControlName="name">
+    </div>
+    <div class="col-md-6">
+      <label class="form-label">Length</label>
+      <input class="form-control" formControlName="length">
+    </div>
+    <div class="col-md-6">
+      <label class="form-label">Start</label>
+      <input type="datetime-local" class="form-control" formControlName="start">
+    </div>
+    <div class="col-md-6">
+      <label class="form-label">Resort</label>
+      <input class="form-control" formControlName="resort">
+    </div>
+    <div class="col-md-6">
+      <label class="form-label">Per Person</label>
+      <input class="form-control" formControlName="perPerson">
+    </div>
+    <div class="col-md-6">
+      <label class="form-label">Image</label>
+      <input class="form-control" formControlName="image">
+    </div>
+    <div class="col-12">
+      <label class="form-label">Description</label>
+      <textarea rows="4" class="form-control" formControlName="description"></textarea>
+    </div>
+    <div class="col-12">
+      <button class="btn btn-primary" type="submit" [disabled]="addForm.invalid">Save</button>
+    </div>
+  </div>
+</form>
+
