@@ -19,7 +19,7 @@
     </p>
 
     <p class="card-text" [innerHTML]="trip.description"></p>
-    <div class="d-flex gap-2">
+    <div class="d-flex gap-2" *ngIf="isLoggedIn()">
       <button class="btn btn-sm btn-info rounded-pill" (click)="onEdit()">Edit Trip</button>
     </div>
   </div>
